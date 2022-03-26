@@ -3,10 +3,10 @@
 .location {
   @include flex-center;
   background-color: rgba(226, 226, 226, 0.89);
-  p{
+  p {
     font-weight: 400;
     font-size: 16px;
-    margin: 18px ;
+    margin: 18px;
   }
 }
 
@@ -70,8 +70,8 @@
     flex-direction: column;
     padding: 0 5px 0 10px;
     @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 4%;
+      flex-direction: row;
+      gap: 4%;
     }
   }
 }
@@ -83,14 +83,34 @@
   background-color: rgba(211, 211, 211, 0.24);
   padding: 35px 20px 50px;
 
-    @media (min-width: 860px) {
-      .restaurant-cards {
-        @include flex-center;
+  @media (min-width: 860px) {
+    .restaurant-cards {
+      @include flex-center;
       flex-wrap: wrap;
-      gap: 4%
+      gap: 4%;
     }
-     & .restaurant-card {
+    & .restaurant-card {
       min-width: 300px;
     }
-    }
   }
+}
+
+/* ---- A LA FRANCAISE ---- */
+
+.alafrancaise {
+  position: relative;
+  border-radius: 50px 50px 0 0;
+  background-color: rgb(235, 235, 235);
+  padding: 0 20px 20px;
+  margin-top: -15%;
+  h1 {
+    font-family: "Shrikhand", "sans-serif";
+  }
+  .menu-card {
+    background-color: #fff;
+    margin-bottom: 20px;
+  }
+}
+.order {
+  @include flex-center;
+}
