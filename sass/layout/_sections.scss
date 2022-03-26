@@ -1,0 +1,74 @@
+/* LOCATION */
+
+.location {
+  @include flex-center;
+  background-color: rgb(226, 226, 226);
+  p {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px;
+  }
+}
+
+/* EXPLORE */
+
+.explore {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 45px 50px;
+  background-color: rgb(240, 240, 240);
+  .explore-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .explore-btn {
+    margin-top: 20px;
+  }
+}
+
+/* LANDING_PAGE */
+
+.landing-page img {
+  width: 100%;
+}
+
+.lanoteenchantee img {
+  width: 100%;
+}
+
+.lapalettedugout img {
+  width: 100%;
+}
+
+.ledelicesdessens img {
+  width: 100%;
+}
+
+/* MENU */
+
+.menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* FUNCTIONNING */
+
+.functioning {
+  padding: 30px 20px 40px;
+  h2 {
+    margin-bottom: 30px;
+  }
+  .cards-container {
+    padding: 0 5px 0 10px;
+  }
+}
+
+/* RESTAURANT */
+
+.restaurant {
+  margin: 0;
+  background-color: rgba(211, 211, 211, 0.24);
+  padding: 35px 20px 50px;
+}

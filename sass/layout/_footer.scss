@@ -1,0 +1,29 @@
+/* FOOTER */
+
+.footer {
+  background-color: $black-grey;
+  color: #fff;
+  padding: 15px 30px 30px;
+  h2 {
+    font-size: 19px;
+    font-weight: 300;
+    font-family: "Shrikhand", "sans-serif";
+    padding-bottom: 10px;
+  }
+  a {
+    @include flex-center;
+    justify-content: left;
+    padding-bottom: 10px;
+    p {
+      font-size: 17px;
+      margin: 0;
+    }
+    i {
+      font-size: 16px;
+      padding-right: 10px;
+    }
+    .fa-handshake-angle {
+      font-size: 12px;
+    }
+  }
+}
