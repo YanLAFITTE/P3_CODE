@@ -359,7 +359,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0px 4px 2px #cfcfcf;
+  box-shadow: 0px 4px 2px lightgray;
 }
 .header .logo {
   width: 160px;
@@ -371,12 +371,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e2e2e2;
+  background-color: rgba(226, 226, 226, 0.89);
 }
 .location p {
-  font-weight: 700;
-  font-size: 18px;
-  padding: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 18px;
 }
 
 /* EXPLORE */
@@ -386,12 +386,17 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px 45px 50px;
+  padding: 20px 15px 50px;
   background-color: #f0f0f0;
 }
 .explore .explore-title {
-  margin-top: 20px;
+  margin: 0 40px;
+  margin-top: 18px;
   margin-bottom: 0;
+}
+.explore p {
+  font-size: 18px;
+  font-weight: 100;
 }
 .explore .explore-btn {
   margin-top: 20px;
@@ -540,6 +545,17 @@ body {
   background-color: #99E2D0;
   color: #217460;
   padding: 6px 14px;
+}
+.restaurant-card .card-infos-heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.restaurant-card .fa-regular.fa-heart {
+  margin-right: 20px;
+  font-size: 22px;
+  opacity: 0.6;
 }
 .restaurant-card h3 {
   padding: 0 15px;

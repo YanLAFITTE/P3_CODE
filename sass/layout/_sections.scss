@@ -2,11 +2,11 @@
 
 .location {
   @include flex-center;
-  background-color: rgb(226, 226, 226);
-  p {
-    font-weight: 700;
-    font-size: 18px;
-    padding: 5px;
+  background-color: rgba(226, 226, 226, 0.89);
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    margin: 18px ;
   }
 }
 
@@ -16,11 +16,16 @@
   @include flex-center;
   flex-direction: column;
   text-align: center;
-  padding: 20px 45px 50px;
+  padding: 20px 15px 50px;
   background-color: rgb(240, 240, 240);
   .explore-title {
-    margin-top: 20px;
+    margin: 0 40px;
+    margin-top: 18px;
     margin-bottom: 0;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 100;
   }
   .explore-btn {
     margin-top: 20px;
