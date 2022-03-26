@@ -494,7 +494,7 @@ body {
   left: -10px;
   font-size: 14px;
   background-color: #9356DC;
-  color: #FFF;
+  color: #fff;
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -517,16 +517,29 @@ body {
 
 /* RESTAURANTS */
 .restaurant-card {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 3px 8px rgba(163, 163, 163, 0.37);
   margin-bottom: 20px;
+  position: relative;
 }
 .restaurant-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
+}
+.restaurant-card .new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 13px;
+  background-color: #99E2D0;
+  color: #217460;
+  padding: 6px 14px;
 }
 .restaurant-card h3 {
   padding: 0 15px;
