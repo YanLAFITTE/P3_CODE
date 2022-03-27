@@ -91,12 +91,12 @@
   position: relative;
   border-radius: 50px 50px 0 0;
   background-color: rgb(235, 235, 235);
-  padding: 0 20px 20px;
+  padding: 0 20px 40px;
   margin-top: -15%;
   h1 {
     font-family: "Shrikhand", "sans-serif";
   }
- 
+
   .menu-card {
     background-color: #fff;
     margin-bottom: 20px;
@@ -106,6 +106,6 @@
   @include flex-center;
 }
 .menu h2 {
-    font-size: 18px;
-    font-weight: 100;
-  }
+  font-size: 18px;
+  font-weight: 100;
+}
