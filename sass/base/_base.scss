@@ -1,3 +1,7 @@
+/****** TYPOGRAPHY ******/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+
+/******* BASE ******/
 *,
 ::before,
 ::after {
@@ -8,6 +12,6 @@ a {
   color: inherit;
 }
 body {
-  font-family: "Roboto", "sans-serif";
+  font-family: "Roboto", sans-serif;
 }
-
+ 

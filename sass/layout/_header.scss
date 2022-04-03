@@ -1,7 +1,9 @@
-/* HEADER */
+@use "../abstracts/placeholders";
+
+/****** HEADER ******/
 
 .header {
-  @include flex-center;
+  @extend %flex-center;
   position: relative;
   .logo {
     width: 160px;

@@ -1,13 +1,12 @@
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
-@import "./vendors/normalize";
-@import "./base/typography";
-@import "./base/base";
-@import "./base/animations";
-@import "./layout/header";
-@import "./layout/sections";
-@import "./layout/footer";
-@import "./modules/btn";
-@import "./modules/cards";
+@use "./abstracts/variables";
+@use "./vendors/normalize";
+@use "./abstracts/placeholders";
+@use "./base/base";
+@use "./base/animations";
+@use "./layout/header";
+@use "./layout/sections";
+@use "./layout/footer";
+@use "./modules/btn";
+@use "./modules/cards";
 
 

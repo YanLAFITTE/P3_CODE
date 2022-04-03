@@ -1,0 +1,11 @@
+@use "../abstracts/variables";
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+%btn-back {
+    background-image: variables.$linear;
+}

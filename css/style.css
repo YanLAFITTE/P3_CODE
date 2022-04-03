@@ -1,3 +1,5 @@
+/****** TYPOGRAPHY ******/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +7,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -338,6 +339,17 @@ template {
   display: none;
 }
 
+.functioning-card .list-numbers, .restaurant-card .new, .restaurant-card .card-infos-heart, .footer a, .location, .explore, .functioning .cards-container, .order, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-btn {
+  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
+}
+
+/******* BASE ******/
 *,
 ::before,
 ::after {
@@ -350,14 +362,11 @@ a {
 }
 
 body {
-  font-family: "Roboto", "sans-serif";
+  font-family: "Roboto", sans-serif;
 }
 
-/* HEADER */
+/****** HEADER ******/
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 .header .logo {
@@ -377,11 +386,8 @@ body {
   font-weight: 800;
 }
 
-/* LOCATION */
+/****** LOCATION ******/
 .location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(226, 226, 226, 0.89);
 }
 .location p {
@@ -390,11 +396,8 @@ body {
   margin: 18px;
 }
 
-/* EXPLORE */
+/****** EXPLORE ******/
 .explore {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   text-align: center;
   padding: 20px 15px 50px;
@@ -413,21 +416,21 @@ body {
   margin-top: 20px;
 }
 
-/* LANDING_PAGE */
+/****** LANDING_PAGE ******/
 .landing-page img {
   width: 100%;
   height: 35vh;
   object-fit: cover;
 }
 
-/* MENU */
+/****** MENU ******/
 .menu-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* FUNCTIONNING */
+/****** FUNCTIONNING ******/
 .functioning {
   padding: 30px 20px 40px;
 }
@@ -435,9 +438,6 @@ body {
   margin-bottom: 30px;
 }
 .functioning .cards-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   padding: 0 5px 0 10px;
 }
@@ -448,7 +448,7 @@ body {
   }
 }
 
-/* RESTAURANT */
+/****** RESTAURANT ******/
 .restaurant {
   margin: 0;
   background-color: rgba(211, 211, 211, 0.24);
@@ -456,9 +456,8 @@ body {
 }
 @media (min-width: 860px) {
   .restaurant .restaurant-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     flex-wrap: wrap;
     gap: 4%;
   }
@@ -467,7 +466,7 @@ body {
   }
 }
 
-/* ---- MAIN-MENU ---- */
+/****** MAIN-MENU ******/
 .main-menu {
   position: relative;
   border-radius: 50px 50px 0 0;
@@ -483,18 +482,12 @@ body {
   margin-bottom: 20px;
 }
 
-.order {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .menu h2 {
   font-size: 18px;
   font-weight: 100;
 }
 
-/* FOOTER */
+/****** FOOTER ******/
 .footer {
   background-color: #353535;
   color: #fff;
@@ -507,9 +500,6 @@ body {
   padding-bottom: 10px;
 }
 .footer a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   justify-content: left;
   padding-bottom: 10px;
 }
@@ -529,7 +519,6 @@ body {
   border-radius: 30px;
   box-shadow: 0 3px 8px #a3a3a3;
   color: #fff;
-  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
   padding: 15px 25px;
 }
 
@@ -554,9 +543,6 @@ body {
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .functioning-card i {
   opacity: 0.5;
@@ -586,9 +572,6 @@ body {
   border-radius: 15px 15px 0 0;
 }
 .restaurant-card .new {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -598,9 +581,6 @@ body {
   padding: 6px 14px;
 }
 .restaurant-card .card-infos-heart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   justify-content: space-between;
 }
 .restaurant-card .fa-regular.fa-heart {

@@ -1,3 +1,6 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
 /* FUNCTIONING */
 
 .functioning-card {
@@ -14,24 +17,24 @@
     position: absolute;
     left: -10px;
     font-size: 14px;
-    background-color: $purple;
+    background-color: variables.$primary;
     color: #fff;
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    @include flex-center;
+    @extend %flex-center;
   }
   i {
     opacity: 0.5;
     padding: 0 20px 0 15px;
   }
   .fa-store {
-    color: $purple;
+    color: variables.$primary;
     opacity: 1;
   }
 }
 .purple-card {
-  background-color: lighten($purple, 34%);
+  background-color: lighten(variables.$primary, 34%);
 }
 /* RESTAURANTS */
 
@@ -48,24 +51,24 @@
     border-radius: 15px 15px 0 0;
   }
   .new {
-    @include flex-center;
+    @extend %flex-center;
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 13px;
-    background-color: $pastel-green;
-    color: darken($pastel-green, 45%);
+    background-color: variables.$tertiary;
+    color: darken(variables.$tertiary, 45%);
     padding: 6px 14px;
   }
   .card-infos-heart {
-    @include flex-center;
+    @extend %flex-center;
     justify-content: space-between;
   }
   .fa-regular.fa-heart {
     position: relative;
     margin-right: 20px;
     font-size: 22px;
-    color: $purple;
+    color: variables.$primary;
     &:hover {
       opacity: 0;
     }
@@ -73,7 +76,7 @@
   .fa-solid.fa-heart {
     position: absolute;
     right: 0;
-    color: $pink;
+    color: variables.$secondary;
     margin-right: 20px;
     font-size: 22px;
     opacity: 0;
