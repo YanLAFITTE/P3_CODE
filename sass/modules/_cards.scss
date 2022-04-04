@@ -13,6 +13,15 @@
   @extend %function-shadow;
   padding: 26px 20px;
   margin: 5px 0 20px;
+  transition: all 100ms ease;
+  &:hover {
+    background-color: lighten(variables.$primary, 34%);
+    cursor: pointer;
+    i {
+      color: variables.$primary;
+      opacity: 1;
+    }
+  }
 
   .list-numbers {
     position: absolute;
@@ -29,16 +38,9 @@
     opacity: 0.5;
     padding: 0 20px 0 15px;
   }
-  .fa-store {
-    color: variables.$primary;
-    opacity: 1;
-  }
-}
-.purple-card {
-  background-color: lighten(variables.$primary, 34%);
 }
 
-/****** RESTAURANTS ******/
+/****** RESTAURANTS-CARDS ******/
 
 .restaurant-card {
   position: relative;
@@ -61,6 +63,7 @@
     background-color: variables.$tertiary;
     color: darken(variables.$tertiary, 45%);
     padding: 6px 14px;
+    border-radius: 1px;
   }
   .card-infos-heart {
     @extend %flex-center;
@@ -96,5 +99,3 @@
     padding: 0 0 10px 15px;
   }
 }
-
-

@@ -20,15 +20,15 @@
 }
 
 .menu-card, .restaurant-card {
-  box-shadow: 0 6px 8px #dbdbdb;
+  box-shadow: 0 4px 10px #dbdbdb;
 }
 
 .btn {
-  box-shadow: 0 6px 8px #a8a8a8;
+  box-shadow: 0 6px 8px #cecece;
 }
 
 .functioning-card {
-  box-shadow: 0 6px 8px #dbdbdb;
+  box-shadow: 0 4px 10px #dbdbdb;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -433,7 +433,7 @@ body {
 .btn {
   border-radius: 30px;
   color: #fff;
-  padding: 15px 25px;
+  padding: 16px 25px;
 }
 
 /****** FUCTIONNING-CARD *****/
@@ -446,6 +446,15 @@ body {
   background-color: #f4f4f4;
   padding: 26px 20px;
   margin: 5px 0 20px;
+  transition: all 100ms ease;
+}
+.functioning-card:hover {
+  background-color: #efe6fa;
+  cursor: pointer;
+}
+.functioning-card:hover i {
+  color: #9356dc;
+  opacity: 1;
 }
 .functioning-card .list-numbers {
   position: absolute;
@@ -461,16 +470,8 @@ body {
   opacity: 0.5;
   padding: 0 20px 0 15px;
 }
-.functioning-card .fa-store {
-  color: #9356dc;
-  opacity: 1;
-}
 
-.purple-card {
-  background-color: #efe6fa;
-}
-
-/****** RESTAURANTS ******/
+/****** RESTAURANTS-CARDS ******/
 .restaurant-card {
   position: relative;
   border-radius: 15px;
@@ -491,6 +492,7 @@ body {
   background-color: #99e2d0;
   color: #217460;
   padding: 6px 14px;
+  border-radius: 1px;
 }
 .restaurant-card .card-infos-heart {
   justify-content: space-between;
