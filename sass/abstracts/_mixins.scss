@@ -1,0 +1,6 @@
+@use "../abstracts/variables";
+
+@mixin color-back($light: 75%) {
+    background-color: lighten(variables.$quaternary, $light);
+    
+}

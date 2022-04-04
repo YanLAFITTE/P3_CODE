@@ -1,12 +1,17 @@
 @use "./abstracts/variables";
-@use "./vendors/normalize";
 @use "./abstracts/placeholders";
+@use "./abstracts/mixins";
+
+@use "./vendors/normalize";
+
 @use "./base/base";
 @use "./base/animations";
+
 @use "./layout/header";
 @use "./layout/sections";
 @use "./layout/footer";
+
 @use "./modules/btn";
 @use "./modules/cards";
 
-
+@use "./pages/home";

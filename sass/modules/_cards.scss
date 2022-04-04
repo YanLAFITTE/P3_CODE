@@ -1,42 +1,9 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
-/* FUNCTIONING */
 
-.functioning-card {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  background-color: rgb(240, 240, 240);
-  border-radius: 20px;
-  padding: 26px 20px;
-  margin: 5px 0 20px;
-  box-shadow: 0 6px 8px rgba(163, 163, 163, 0.37);
-  .list-numbers {
-    position: absolute;
-    left: -10px;
-    font-size: 14px;
-    background-color: variables.$primary;
-    color: #fff;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    @extend %flex-center;
-  }
-  i {
-    opacity: 0.5;
-    padding: 0 20px 0 15px;
-  }
-  .fa-store {
-    color: variables.$primary;
-    opacity: 1;
-  }
-}
-.purple-card {
-  background-color: lighten(variables.$primary, 34%);
-}
-/* RESTAURANTS */
+/****** RESTAURANTS ******/
 
 .restaurant-card {
   background-color: #fff;
@@ -109,4 +76,40 @@
     font-weight: 100;
     margin-top: 5px;
   }
+}
+/****** FUCTIONNING-CARD *****/
+.functioning-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+@include mixins.color-back;
+  border-radius: 20px;
+  padding: 26px 20px;
+  margin: 5px 0 20px;
+  box-shadow: 0 6px 8px rgba(163, 163, 163, 0.37);
+
+
+  .list-numbers {
+    position: absolute;
+    left: -10px;
+    font-size: 14px;
+    background-color: variables.$primary;
+    color: #fff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    @extend %flex-center;
+  }
+  i {
+    opacity: 0.5;
+    padding: 0 20px 0 15px;
+  }
+  .fa-store {
+    color: variables.$primary;
+    opacity: 1;
+  }
+}
+.purple-card {
+  background-color: lighten(variables.$primary, 34%);
 }

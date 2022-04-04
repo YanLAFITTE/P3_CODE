@@ -1,5 +1,15 @@
 /****** TYPOGRAPHY ******/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+.location, .explore, .restaurant-card .new, .restaurant-card .card-infos-heart, .functioning-card .list-numbers, .footer a, .functioning .cards-container, .order, .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-btn {
+  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -339,16 +349,6 @@ template {
   display: none;
 }
 
-.functioning-card .list-numbers, .restaurant-card .new, .restaurant-card .card-infos-heart, .footer a, .location, .explore, .functioning .cards-container, .order, .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.explore-btn {
-  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
-}
-
 /******* BASE ******/
 *,
 ::before,
@@ -373,12 +373,7 @@ body {
   width: 160px;
   margin: 25px 0 15px;
 }
-
-.header-shadow {
-  box-shadow: 0px 4px 2px lightgray;
-}
-
-.fa-arrow-left {
+.header .fa-arrow-left {
   position: absolute;
   top: 25px;
   left: 20px;
@@ -386,34 +381,8 @@ body {
   font-weight: 800;
 }
 
-/****** LOCATION ******/
-.location {
-  background-color: rgba(226, 226, 226, 0.89);
-}
-.location p {
-  font-weight: 400;
-  font-size: 16px;
-  margin: 18px;
-}
-
-/****** EXPLORE ******/
-.explore {
-  flex-direction: column;
-  text-align: center;
-  padding: 20px 15px 50px;
-  background-color: #f0f0f0;
-}
-.explore .explore-title {
-  margin: 0 40px;
-  margin-top: 18px;
-  margin-bottom: 0;
-}
-.explore p {
-  font-size: 18px;
-  font-weight: 100;
-}
-.explore .explore-btn {
-  margin-top: 20px;
+.header-shadow {
+  box-shadow: 0px 4px 2px lightgray;
 }
 
 /****** LANDING_PAGE ******/
@@ -450,14 +419,15 @@ body {
 
 /****** RESTAURANT ******/
 .restaurant {
+  background-color: #f4f4f4;
   margin: 0;
-  background-color: rgba(211, 211, 211, 0.24);
   padding: 35px 20px 50px;
 }
 @media (min-width: 860px) {
   .restaurant .restaurant-cards {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 4%;
   }
@@ -517,47 +487,11 @@ body {
 
 .explore-btn {
   border-radius: 30px;
-  box-shadow: 0 3px 8px #a3a3a3;
   color: #fff;
   padding: 15px 25px;
 }
 
-/* FUNCTIONING */
-.functioning-card {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  padding: 26px 20px;
-  margin: 5px 0 20px;
-  box-shadow: 0 6px 8px rgba(163, 163, 163, 0.37);
-}
-.functioning-card .list-numbers {
-  position: absolute;
-  left: -10px;
-  font-size: 14px;
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-}
-.functioning-card i {
-  opacity: 0.5;
-  padding: 0 20px 0 15px;
-}
-.functioning-card .fa-store {
-  color: #9356DC;
-  opacity: 1;
-}
-
-.purple-card {
-  background-color: #efe6fa;
-}
-
-/* RESTAURANTS */
+/****** RESTAURANTS ******/
 .restaurant-card {
   background-color: #fff;
   border-radius: 15px;
@@ -626,6 +560,71 @@ body {
 .menu-card p {
   font-weight: 100;
   margin-top: 5px;
+}
+
+/****** FUCTIONNING-CARD *****/
+.functioning-card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 26px 20px;
+  margin: 5px 0 20px;
+  box-shadow: 0 6px 8px rgba(163, 163, 163, 0.37);
+}
+.functioning-card .list-numbers {
+  position: absolute;
+  left: -10px;
+  font-size: 14px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+.functioning-card i {
+  opacity: 0.5;
+  padding: 0 20px 0 15px;
+}
+.functioning-card .fa-store {
+  color: #9356DC;
+  opacity: 1;
+}
+
+.purple-card {
+  background-color: #efe6fa;
+}
+
+/****** LOCATION ******/
+.location {
+  background-color: #e8e8e8;
+}
+.location p {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 18px;
+}
+
+/****** EXPLORE ******/
+.explore {
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 15px 50px;
+  background-color: #f4f4f4;
+}
+.explore .explore-title {
+  margin: 0 40px;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.explore p {
+  font-size: 18px;
+  font-weight: 100;
+}
+.explore .explore-btn {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

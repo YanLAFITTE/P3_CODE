@@ -9,14 +9,14 @@
     width: 160px;
     margin: 25px 0 15px;
   }
+  .fa-arrow-left {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 22px;
+    font-weight: 800;
+  }
 }
 .header-shadow {
   box-shadow: 0px 4px 2px rgb(211, 211, 211);
-}
-.fa-arrow-left {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-  font-size: 22px;
-  font-weight: 800;
 }
