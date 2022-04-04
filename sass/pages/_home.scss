@@ -3,6 +3,7 @@
 @use "../abstracts/mixins";
 
 /****** LOCATION ******/
+
 .location {
   @extend %flex-center;
   @include mixins.color-back(70%);
@@ -19,18 +20,52 @@
   @extend %flex-center;
   flex-direction: column;
   text-align: center;
-  padding: 20px 15px 50px;
+  padding: 20px 20px 50px;
   @include mixins.color-back;
   .explore-title {
-    margin: 0 40px;
-    margin-top: 18px;
-    margin-bottom: 0;
+    margin: 18px 40px 0;
   }
   p {
     font-size: 18px;
     font-weight: 100;
   }
-  .explore-btn {
+  .btn {
     margin-top: 20px;
   }
+}
+
+/****** FUNCTIONNING ******/
+
+.functioning {
+  @extend %padding-sections;
+  .cards-container {
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 0 5px 0 10px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 4%;
+    }
+  }
+}
+
+/****** RESTAURANTS ******/
+
+.restaurant {
+@include mixins.color-back;
+@extend %padding-sections;
+margin: 0;
+
+  @media (min-width: 860px) {
+    .restaurant-cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4%;
+    }
+    & .restaurant-card {
+      min-width: 300px;
+    }
+}
 }

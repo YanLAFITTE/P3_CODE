@@ -1,9 +1,10 @@
 @use "../abstracts/placeholders";
 
 
-.explore-btn {
+.btn {
+  @extend %btn-back;
+  @extend %btn-shadow;
   border-radius: 30px;
   color: #fff;
-  @extend %btn-back;
   padding: 15px 25px;
 }

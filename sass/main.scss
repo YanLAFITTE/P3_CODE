@@ -8,10 +8,11 @@
 @use "./base/animations";
 
 @use "./layout/header";
-@use "./layout/sections";
 @use "./layout/footer";
 
 @use "./modules/btn";
 @use "./modules/cards";
+@use "./modules/menu-card";
 
 @use "./pages/home";
+@use "./pages/restaurants";

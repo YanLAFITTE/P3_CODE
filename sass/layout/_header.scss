@@ -1,9 +1,11 @@
 @use "../abstracts/placeholders";
+@use "../abstracts/variables";
 
 /****** HEADER ******/
 
 .header {
   @extend %flex-center;
+  @extend %header-shadow;
   position: relative;
   .logo {
     width: 160px;
@@ -16,7 +18,4 @@
     font-size: 22px;
     font-weight: 800;
   }
-}
-.header-shadow {
-  box-shadow: 0px 4px 2px rgb(211, 211, 211);
 }
