@@ -29,6 +29,9 @@
 %btn-shadow {
   box-shadow: 0 6px 8px variables.$btn-shadow;
 }
+%btn-shadow-hover {
+  box-shadow: 0 8px 14px variables.$btn-shadow;
+}
 %function-shadow {
   box-shadow: 0 4px 10px variables.$function-shadow;
 }

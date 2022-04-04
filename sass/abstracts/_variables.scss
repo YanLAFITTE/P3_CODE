@@ -6,6 +6,7 @@ $quaternary: #353535;
 $quinternary: #fff;
 //GRADIENT
 $linear: linear-gradient(-5deg, $primary, $secondary);
+$light-linear: linear-gradient(-5deg, lighten($primary, 5%), lighten($secondary, 5%));
 //SHADOW
 $header-shadow: lighten($quaternary, 60%);
 $card-shadow: lighten($quaternary, 65%);

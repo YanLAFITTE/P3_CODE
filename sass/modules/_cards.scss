@@ -83,7 +83,7 @@
     opacity: 0;
     &:hover {
       opacity: 1;
-      animation: heart 150ms;
+      animation: heart 100ms;
     }
     &.new::before {
       content: "Nouveau";

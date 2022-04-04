@@ -32,6 +32,10 @@
   box-shadow: 0 6px 8px #cecece;
 }
 
+.btn:hover {
+  box-shadow: 0 8px 14px #cecece;
+}
+
 .functioning-card {
   box-shadow: 0 4px 10px #dbdbdb;
 }
@@ -449,6 +453,9 @@ body {
   color: #fff;
   padding: 16px 25px;
 }
+.btn:hover {
+  background-image: linear-gradient(-5deg, #a16be0, #ff93e1);
+}
 
 /****** FUCTIONNING-CARD *****/
 .functioning-card {
@@ -524,7 +531,7 @@ body {
 }
 .restaurant-card .fa-solid.fa-heart:hover {
   opacity: 1;
-  animation: heart 150ms;
+  animation: heart 100ms;
 }
 .restaurant-card .fa-solid.fa-heart.new::before {
   content: "Nouveau";
