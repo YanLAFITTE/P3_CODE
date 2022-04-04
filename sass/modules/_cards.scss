@@ -12,7 +12,7 @@
   border-radius: 20px;
   @include mixins.color-back;
   @extend %function-shadow;
-  padding: 26px 20px;
+  padding: 28px 20px;
   margin: 5px 0 20px;
   transition: all 100ms ease;
   &:hover {
@@ -46,7 +46,7 @@
 .restaurant-card {
   position: relative;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: variables.$quinternary;
   @extend %card-shadow;
   margin-bottom: 20px;
   img {
@@ -83,17 +83,10 @@
     opacity: 0;
     &:hover {
       opacity: 1;
-      animation: heart 100ms;
+      animation: heart 100ms ease-in;
     }
-    &.new::before {
-      content: "Nouveau";
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background-color: variables.$tertiary;
-      color: darken(variables.$tertiary, 50%);
-      padding: 8px 12px;
-      border-radius: 2px;
-    }
+  }
+  &.new::before {
+    @extend %new;
   }
 }

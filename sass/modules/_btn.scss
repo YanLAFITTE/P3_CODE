@@ -9,8 +9,10 @@
   border-radius: 30px;
   color: variables.$quinternary;
   padding: 16px 25px;
+  transition: all 100ms ease;
   &:hover {
     background-image: variables.$light-linear;
     @extend %btn-shadow-hover;
   }
 }
+ 
