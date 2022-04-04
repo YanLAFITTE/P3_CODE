@@ -1,6 +1,7 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
 @use "../abstracts/mixins";
+@use "../base/animations";
 
 /****** FUCTIONNING-CARD *****/
 .functioning-card {
@@ -25,7 +26,7 @@
 
   .list-numbers {
     position: absolute;
-    left: -10px;
+    left: -12px;
     font-size: 14px;
     background-color: variables.$primary;
     color: #fff;
@@ -67,37 +68,32 @@
     justify-content: space-between;
   }
   .fa-regular.fa-heart {
+    opacity: 0.7;
     position: relative;
-    margin-right: 20px;
-    font-size: 22px;
-    color: variables.$primary;
-    &:hover {
-      opacity: 0;
-    }
+    @extend %heart-position;
   }
   .fa-solid.fa-heart {
     position: absolute;
     right: 0;
-    color: variables.$secondary;
-    margin-right: 20px;
-    font-size: 22px;
+    color: transparent;
+    background-image: variables.$linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    @extend %heart-position;
     opacity: 0;
     &:hover {
       opacity: 1;
+      animation: heart 150ms;
     }
-  }
-  &.new {
-    position: relative;
-  
-  &::before {
-    content: "Nouveau";
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: variables.$tertiary;
-    color: darken(variables.$tertiary, 50%);
-    padding: 5px 10px;
-    border-radius: 2px;
-  }
+    &.new::before {
+      content: "Nouveau";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: variables.$tertiary;
+      color: darken(variables.$tertiary, 50%);
+      padding: 8px 12px;
+      border-radius: 2px;
+    }
   }
 }

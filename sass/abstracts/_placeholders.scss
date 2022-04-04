@@ -13,6 +13,12 @@
 %btn-back {
   background-image: variables.$linear;
 }
+
+%heart-position {
+  margin-right: 20px;
+  font-size: 22px;
+}
+
 /****** SHADOWS ******/
 %header-shadow {
   box-shadow: 0px 3px 4px variables.$header-shadow;
