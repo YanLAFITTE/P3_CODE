@@ -23,7 +23,7 @@
 .main-menu {
   position: relative;
   border-radius: 50px 50px 0 0;
-  background-color: rgb(235, 235, 235);
+  @include mixins.color-back;
   padding: 0 20px 40px;
   margin-top: -15%;
   h1 {
@@ -31,7 +31,7 @@
   }
 
   .menu-card {
-    background-color: #fff;
+    background-color: variables.$quinternary;
     margin-bottom: 20px;
   }
 }
