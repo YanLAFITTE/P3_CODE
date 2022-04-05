@@ -2,6 +2,12 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
+/****** HEADER-SHADOW ******/
+
+.header-shadow {
+  @extend %header-shadow;
+}
+
 /****** LOCATION ******/
 
 .location {
@@ -63,6 +69,6 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 4%;
-    } 
+    }
   }
 }

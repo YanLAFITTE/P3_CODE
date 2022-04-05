@@ -14,5 +14,8 @@
     background-image: variables.$light-linear;
     @extend %btn-shadow-hover;
   }
+  &.btn-wide {
+    padding: 16px 45px;
+  }
 }
  

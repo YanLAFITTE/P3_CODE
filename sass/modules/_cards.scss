@@ -37,7 +37,7 @@
   }
   i {
     opacity: 0.5;
-    padding: 0 20px 0 15px;
+    padding: 0 20px 0 12px;
   }
 }
 
@@ -48,6 +48,7 @@
   border-radius: 15px;
   background-color: variables.$quinternary;
   @extend %card-shadow;
+  @extend %headings-position;
   margin-bottom: 20px;
   img {
     width: 100%;
@@ -55,14 +56,7 @@
     object-fit: cover;
     border-radius: 15px 15px 0 0;
   }
-  h3 {
-    padding: 0 15px;
-    margin-bottom: 0;
-  }
-  p {
-    margin: 5px 0;
-    padding: 0 0 10px 15px;
-  }
+
   .card-infos-heart {
     @extend %flex-center;
     justify-content: space-between;

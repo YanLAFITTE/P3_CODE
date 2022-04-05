@@ -19,6 +19,19 @@
   font-size: 22px;
 }
 
+%headings-position {
+  h3 {
+    font-size: 18px;
+    padding: 0 15px;
+    margin: 15px 0 0;
+  }
+  p {
+    font-weight: 100;
+    margin: 5px 0;
+    padding: 0 0 15px 15px;
+  }
+}
+
 %new {
   content: "Nouveau";
   position: absolute;
