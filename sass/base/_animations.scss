@@ -1,9 +1,32 @@
+@use "../abstracts/variables";
+
 /****** ANIMATIONS ******/
 @keyframes heart {
-    from{
-      transform: scale(0);
-    }
-  to {
-      transform: scale(1);
-    }
+  from {
+    transform: scale(0);
   }
+  to {
+    transform: scale(1);
+  }
+}
+
+/****** LOADING-SPINNER ******/
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: variables.$quaternary;
+  height: 100vh;
+  opacity: 0.9;
+  animation: delay 1s forwards;
+  animation-delay: 4s;
+  transform-origin: bottom left;
+}
+
+@keyframes delay {
+  to {
+    transform: scale(0);
+    border-radius: 50%;
+  }
+}
