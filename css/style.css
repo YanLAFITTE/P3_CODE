@@ -1,6 +1,6 @@
 /****** TYPOGRAPHY ******/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
-.order, .location, .explore, .functioning .cards-container, .functioning-card .list-numbers, .restaurant-card .card-infos-heart, .footer a, .header {
+.order, .location, .explore, .functioning .cards-container, .menu-card .check, .functioning-card .list-numbers, .restaurant-card .card-infos-heart, .footer a, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,12 +434,12 @@ body {
   background-color: #353535;
   height: 100vh;
   opacity: 0.9;
-  animation: delay 500ms forwards;
-  animation-delay: 3s;
+  animation: delay 500ms 3s forwards;
 }
 @keyframes delay {
   to {
     opacity: 0;
+    transform: translateY(100%);
   }
 }
 .loader .loader-el:after {
@@ -450,7 +450,7 @@ body {
   left: 50%;
   top: 45vh;
   margin-left: -3rem;
-  border: 3px solid #fff;
+  border: 3px solid transparent;
   border-radius: 50%;
   border-color: #9356dc #99e2d0 #ff79da #99e2d0;
   animation: loader 2s linear infinite;
@@ -589,15 +589,16 @@ body {
 }
 .menu-card {
   display: flex;
-  align-items: flex-end;
   border-radius: 17px;
   background-color: #fff;
   margin: 20px -5px;
+  overflow: hidden;
 }
 .menu-card h4 {
   font-weight: 500;
 }
 .menu-card .price {
+  align-self: flex-end;
   font-weight: 500;
   padding-right: 15px;
   margin-left: auto;
@@ -605,7 +606,18 @@ body {
 }
 .menu-card .check {
   background-color: #99e2d0;
-  margin: auto 0;
+  margin-right: -84px;
+  width: 82px;
+  transition: margin-right 500ms ease-in-out;
+}
+.menu-card .check .fa-solid.fa-circle-check {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 28px;
+}
+.menu-card:hover .check {
+  margin-right: 0;
 }
 
 /****** HEADER-SHADOW ******/

@@ -4,23 +4,36 @@
 
 .menu-card {
   display: flex;
-  align-items: flex-end;
   @extend %card-shadow;
   @extend %headings-position;
   border-radius: 17px;
   background-color: variables.$quinternary;
   margin: 20px -5px;
+  overflow: hidden;
   h4 {
     font-weight: 500;
   }
   .price {
+    align-self: flex-end;
     font-weight: 500;
     padding-right: 15px;
     margin-left: auto;
     margin-bottom: 10px;
   }
   .check {
+    @extend %flex-center;
     background-color: variables.$tertiary;
-    margin: auto 0;
+    margin-right: -84px;
+    width: 82px;
+    transition: margin-right 500ms ease-in-out;
+    .fa-solid.fa-circle-check {
+      display: grid;
+      place-items: center;
+      color: variables.$quinternary;
+      font-size: 28px;
+    }
+  }
+  &:hover .check {
+    margin-right: 0;
   }
 }
