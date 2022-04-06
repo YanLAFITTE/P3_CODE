@@ -2,7 +2,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-
 .btn {
   @extend %btn-back;
   @extend %btn-shadow;
@@ -16,6 +15,6 @@
   }
   &.btn-wide {
     padding: 16px 45px;
+    margin: 25px 0;
   }
 }
- 

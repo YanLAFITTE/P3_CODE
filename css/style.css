@@ -418,6 +418,7 @@ body {
 }
 
 /****** ANIMATIONS ******/
+/****** HEART ******/
 @keyframes heart {
   from {
     transform: scale(0);
@@ -461,6 +462,15 @@ body {
   }
 }
 
+/****** CHECK-ROTATION ******/
+@keyframes check-rotate {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
 /****** HEADER ******/
 .header {
   position: relative;
@@ -474,7 +484,7 @@ body {
 .header .fa-arrow-left {
   position: absolute;
   top: 25px;
-  left: 20px;
+  left: 5%;
   font-size: 23px;
 }
 
@@ -517,6 +527,7 @@ body {
 }
 .btn.btn-wide {
   padding: 16px 45px;
+  margin: 25px 0;
 }
 
 /****** FUCTIONNING-CARD *****/
@@ -594,30 +605,54 @@ body {
   margin: 20px -5px;
   overflow: hidden;
 }
+.menu-card h4,
+.menu-card p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .menu-card h4 {
   font-weight: 500;
+}
+.menu-card p {
+  margin: 5px 0 3px;
+}
+.menu-card .menu-card-infos {
+  overflow: hidden;
 }
 .menu-card .price {
   align-self: flex-end;
   font-weight: 500;
-  padding-right: 15px;
+  padding: 0 17px 0 15px;
   margin-left: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .menu-card .check {
   background-color: #99e2d0;
-  margin-right: -84px;
-  width: 82px;
-  transition: margin-right 500ms ease-in-out;
+  margin-right: -80px;
+  min-width: 78px;
+  transition: all 400ms ease;
 }
-.menu-card .check .fa-solid.fa-circle-check {
+.menu-card .check .fa-solid.fa-check {
   display: grid;
   place-items: center;
-  color: #fff;
-  font-size: 28px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #99e2d0;
+  font-size: 20px;
+}
+.menu-card:hover {
+  cursor: pointer;
 }
 .menu-card:hover .check {
   margin-right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-card:hover .fa-solid.fa-check {
+  animation: check-rotate 400ms ease-in;
 }
 
 /****** HEADER-SHADOW ******/
@@ -683,6 +718,9 @@ body {
   font-weight: 500;
   margin-top: 38px;
   margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .main-menu .fa-regular.fa-heart {
   opacity: 0.7;

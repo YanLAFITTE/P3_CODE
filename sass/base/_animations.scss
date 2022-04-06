@@ -2,6 +2,9 @@
 @use "../abstracts/placeholders";
 
 /****** ANIMATIONS ******/
+
+/****** HEART ******/
+
 @keyframes heart {
   from {
     transform: scale(0);
@@ -45,5 +48,16 @@
     to {
       transform: rotate(360deg);
     }
+  }
+}
+
+/****** CHECK-ROTATION ******/
+
+@keyframes check-rotate {
+  from {
+    transform: rotate(-270deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }

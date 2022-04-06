@@ -1,6 +1,7 @@
 @use "../abstracts/placeholders";
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
+@use "../base/animations";
 
 .menu-card {
   display: flex;
@@ -10,30 +11,54 @@
   background-color: variables.$quinternary;
   margin: 20px -5px;
   overflow: hidden;
+  h4,
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
   h4 {
     font-weight: 500;
+  }
+  p {
+    margin: 5px 0 3px;
+  }
+  .menu-card-infos {
+    overflow: hidden;
   }
   .price {
     align-self: flex-end;
     font-weight: 500;
-    padding-right: 15px;
+    padding: 0 17px 0 15px;
     margin-left: auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .check {
     @extend %flex-center;
     background-color: variables.$tertiary;
-    margin-right: -84px;
-    width: 82px;
-    transition: margin-right 500ms ease-in-out;
-    .fa-solid.fa-circle-check {
+    margin-right: -80px;
+    min-width: 78px;
+    transition: all 400ms ease;
+    .fa-solid.fa-check {
       display: grid;
       place-items: center;
-      color: variables.$quinternary;
-      font-size: 28px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: variables.$quinternary;
+      color: variables.$tertiary;
+      font-size: 20px;
     }
   }
-  &:hover .check {
-    margin-right: 0;
+  &:hover {
+    cursor: pointer;
+    .check {
+      margin-right: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .fa-solid.fa-check {
+      animation: check-rotate 400ms ease-in;
+    }
   }
 }
