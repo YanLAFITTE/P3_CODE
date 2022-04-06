@@ -434,16 +434,38 @@ body {
   background-color: #353535;
   height: 100vh;
   opacity: 0.9;
-  animation: delay 1s forwards;
-  animation-delay: 4s;
+  animation: delay 500ms forwards;
+  animation-delay: 3s;
+  transform-origin: top left;
 }
 @keyframes delay {
   to {
     transform: scale(0);
-    border-radius: 50%;
+    border-radius: 10%;
   }
 }
 
+.loader-el:after {
+  position: absolute;
+  top: 45%;
+  right: 47%;
+  content: " ";
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #9356dc #99e2d0 #ff79da #99e2d0;
+  animation: loader 2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /****** HEADER ******/
 .header {
   position: relative;
