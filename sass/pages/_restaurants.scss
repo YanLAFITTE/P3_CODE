@@ -18,9 +18,10 @@
   @include mixins.color-back;
   padding: 0 20px 40px;
   margin-top: -15%;
-  h1 {
+  h2 {
     font-family: "Shrikhand", "sans-serif";
     font-size: 28px;
+    font-weight: 500;
     margin-top: 38px;
     margin-bottom: 0;
   }
@@ -46,13 +47,13 @@
       animation: heart 100ms ease-in;
     }
   }
- 
+
   .menu-heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .menu h2 {
+  .menu h3 {
     position: relative;
     text-transform: uppercase;
     font-size: 17px;
@@ -71,6 +72,3 @@
 .order {
   @extend %flex-center;
 }
-
-
-

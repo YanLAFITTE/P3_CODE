@@ -6,9 +6,11 @@
 .header {
   @extend %flex-center;
   position: relative;
-  .logo {
-    width: 160px;
-    margin: 25px 0 15px;
+  .header-title {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Shrikhand", sans-serif;
+    margin: 20px 0 15px;
   }
   .fa-arrow-left {
     position: absolute;

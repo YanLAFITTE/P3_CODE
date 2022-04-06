@@ -19,7 +19,7 @@
   font-size: 22px;
 }
 
-.menu-card h3, .restaurant-card h3 {
+.menu-card h4, .restaurant-card h4 {
   font-size: 18px;
   padding: 0 15px;
   margin: 15px 0 0;
@@ -436,22 +436,23 @@ body {
   opacity: 0.9;
   animation: delay 1s forwards;
   animation-delay: 4s;
-  transform-origin: bottom left;
 }
-
 @keyframes delay {
   to {
     transform: scale(0);
     border-radius: 50%;
   }
 }
+
 /****** HEADER ******/
 .header {
   position: relative;
 }
-.header .logo {
-  width: 160px;
-  margin: 25px 0 15px;
+.header .header-title {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Shrikhand", sans-serif;
+  margin: 20px 0 15px;
 }
 .header .fa-arrow-left {
   position: absolute;
@@ -576,7 +577,7 @@ body {
   background-color: #fff;
   margin: 20px -5px;
 }
-.menu-card h3 {
+.menu-card h4 {
   font-weight: 500;
 }
 .menu-card .price {
@@ -661,9 +662,10 @@ body {
   padding: 0 20px 40px;
   margin-top: -15%;
 }
-.main-menu h1 {
+.main-menu h2 {
   font-family: "Shrikhand", "sans-serif";
   font-size: 28px;
+  font-weight: 500;
   margin-top: 38px;
   margin-bottom: 0;
 }
@@ -694,14 +696,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.main-menu .menu h2 {
+.main-menu .menu h3 {
   position: relative;
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 100;
   margin: 40px 0 25px;
 }
-.main-menu .menu h2::before {
+.main-menu .menu h3::before {
   position: absolute;
   top: 25px;
   content: "";
