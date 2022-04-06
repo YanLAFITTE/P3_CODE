@@ -436,36 +436,31 @@ body {
   opacity: 0.9;
   animation: delay 500ms forwards;
   animation-delay: 3s;
-  transform-origin: top left;
 }
 @keyframes delay {
   to {
-    transform: scale(0);
-    border-radius: 10%;
+    opacity: 0;
   }
 }
-
-.loader-el:after {
+.loader .loader-el:after {
+  content: "";
+  width: 100px;
+  height: 100px;
   position: absolute;
-  top: 45%;
-  right: 47%;
-  content: " ";
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  left: 50%;
+  top: 45vh;
+  margin-left: -3rem;
   border: 3px solid #fff;
+  border-radius: 50%;
   border-color: #9356dc #99e2d0 #ff79da #99e2d0;
   animation: loader 2s linear infinite;
 }
-
 @keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
+
 /****** HEADER ******/
 .header {
   position: relative;
@@ -647,26 +642,12 @@ body {
   flex-direction: column;
   padding: 0 5px 0 10px;
 }
-@media (min-width: 768px) {
-  .functioning .cards-container {
-    flex-direction: row;
-    gap: 4%;
-  }
-}
 
 /****** RESTAURANTS ******/
 .restaurant {
   background-color: #f4f4f4;
   margin: 0;
-}
-@media (min-width: 860px) {
-  .restaurant .restaurant-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4%;
-  }
+  flex-basis: 50%;
 }
 
 /****** LANDING_PAGE ******/

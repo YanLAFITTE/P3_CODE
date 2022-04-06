@@ -48,10 +48,6 @@
     @extend %flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
-    @media (min-width: 768px) {
-      flex-direction: row;
-      gap: 4%;
-    }
   }
 }
 
@@ -61,14 +57,6 @@
   @include mixins.color-back;
   @extend %padding-sections;
   margin: 0;
-
-  @media (min-width: 860px) {
-    .restaurant-cards {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 4%;
-    }
-  }
+  flex-basis: 50%;
 }
+
