@@ -14,7 +14,7 @@
   animation: turn-up 600ms backwards;
   @for $i from 2 through 4 {
     &:nth-child(#{$i}) {
-      animation-delay: 100ms * $i;
+      animation-delay: 150ms * $i;
     }
   }
   h4,
