@@ -420,10 +420,10 @@ body {
 /****** ANIMATIONS ******/
 /****** HEART ******/
 @keyframes heart {
-  from {
+  0% {
     transform: scale(0);
   }
-  to {
+  100% {
     transform: scale(1);
   }
 }
@@ -454,7 +454,7 @@ body {
   border: 3px solid transparent;
   border-radius: 50%;
   border-color: #9356dc #99e2d0 #ff79da #99e2d0;
-  animation: loader 2s linear infinite;
+  animation: loader 3s linear infinite;
 }
 @keyframes loader {
   to {
@@ -615,7 +615,7 @@ body {
 }
 .restaurant-card .fa-solid.fa-heart:hover {
   opacity: 1;
-  animation: heart;
+  animation: heart 50ms;
 }
 .menu-card {
   display: flex;
@@ -626,13 +626,13 @@ body {
   animation: turn-up 600ms backwards;
 }
 .menu-card:nth-child(2) {
-  animation-delay: 300ms;
+  animation-delay: 200ms;
 }
 .menu-card:nth-child(3) {
-  animation-delay: 450ms;
+  animation-delay: 300ms;
 }
 .menu-card:nth-child(4) {
-  animation-delay: 600ms;
+  animation-delay: 400ms;
 }
 .menu-card h4,
 .menu-card p {
@@ -747,8 +747,8 @@ body {
   font-weight: 500;
   margin-top: 38px;
   margin-bottom: 0;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .main-menu .fa-regular.fa-heart {
@@ -768,10 +768,11 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  cursor: pointer;
 }
 .main-menu .fa-solid.fa-heart:hover {
   opacity: 1;
-  animation: heart 100ms ease-in;
+  animation: heart 50ms;
 }
 .main-menu .menu-heading {
   display: flex;
@@ -792,6 +793,13 @@ body {
   height: 3px;
   width: 45px;
   background-color: #99e2d0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */

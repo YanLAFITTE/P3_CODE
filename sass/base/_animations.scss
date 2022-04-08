@@ -6,10 +6,10 @@
 /****** HEART ******/
 
 @keyframes heart {
-  from {
+  0% {
     transform: scale(0);
   }
-  to {
+  100% {
     transform: scale(1);
   }
 }
@@ -42,7 +42,7 @@
     border-radius: 50%;
     border-color: variables.$primary variables.$tertiary variables.$secondary
       variables.$tertiary;
-    animation: loader 2s linear infinite;
+    animation: loader 3s linear infinite;
   }
   @keyframes loader {
     to {

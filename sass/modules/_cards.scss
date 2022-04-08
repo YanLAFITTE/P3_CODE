@@ -79,8 +79,8 @@
     @extend %heart-position-home;
     opacity: 0;
     &:hover {
-      opacity: 1;
-      animation: heart;
+     opacity: 1;
+     animation: heart 50ms;
     }
   }
   &.new::before {
