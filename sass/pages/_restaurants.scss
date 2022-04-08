@@ -70,14 +70,17 @@
       background-color: variables.$tertiary;
     }
   }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.order {
-  @extend %flex-center;
+  @media (min-width: 768px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 5%;
+      .menu {
+        min-width: 33%;
+      }
+    }
+  }
+  .order {
+    @extend %flex-center;
+  }
 }

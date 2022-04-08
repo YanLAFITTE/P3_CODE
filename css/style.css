@@ -1,6 +1,6 @@
 /****** TYPOGRAPHY ******/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
-.order, .location, .explore, .functioning .cards-container, .menu-card .check, .functioning-card .list-numbers, .restaurant-card .card-infos-heart, .footer a, .header {
+.main-menu .order, .location, .explore, .functioning .cards-container, .menu-card .check, .functioning-card .list-numbers, .restaurant-card .card-infos-heart, .footer a, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -718,12 +718,30 @@ body {
   flex-direction: column;
   padding: 0 5px 0 10px;
 }
+@media (min-width: 992px) {
+  .functioning .cards-container {
+    flex-direction: row;
+    gap: 5%;
+  }
+}
 
 /****** RESTAURANTS ******/
 .restaurant {
   background-color: #f4f4f4;
   margin: 0;
   flex-basis: 50%;
+}
+.restaurant .restaurant-cards {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (min-width: 992px) {
+  .restaurant .restaurant-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+  }
 }
 
 /****** LANDING_PAGE ******/
@@ -794,12 +812,15 @@ body {
   width: 45px;
   background-color: #99e2d0;
 }
-
-.wrapper {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
+@media (min-width: 768px) {
+  .main-menu .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5%;
+  }
+  .main-menu .wrapper .menu {
+    min-width: 33%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

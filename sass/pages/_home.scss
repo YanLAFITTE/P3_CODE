@@ -48,6 +48,10 @@
     @extend %flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      gap: 5%;
+    }
   }
 }
 
@@ -58,5 +62,14 @@
   @extend %padding-sections;
   margin: 0;
   flex-basis: 50%;
+  .restaurant-cards {
+    @include mixins.nowrap-text;
+  }
+  @media (min-width: 992px) {
+    .restaurant-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3%;
+    }
+  }
 }
-
