@@ -3,3 +3,9 @@
 @mixin color-back($light: 75%) {
     background-color: lighten(variables.$quaternary, $light);
 }
+
+@mixin nowrap-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

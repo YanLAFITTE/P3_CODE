@@ -435,9 +435,9 @@ body {
   background-color: #353535;
   height: 100vh;
   opacity: 0.9;
-  animation: delay 500ms 3s forwards;
+  animation: load 500ms 3s forwards;
 }
-@keyframes delay {
+@keyframes load {
   to {
     opacity: 0;
     transform: translateY(100%);
@@ -469,6 +469,23 @@ body {
   }
   to {
     transform: rotate(0deg);
+  }
+}
+/****** MENUS-TRANSLATION ******/
+@keyframes turn-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1) translateY(0);
   }
 }
 /****** HEADER ******/
@@ -542,6 +559,11 @@ body {
   margin: 5px 0 20px;
   transition: all 100ms ease;
 }
+.functioning-card span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .functioning-card:hover {
   background-color: #efe6fa;
   cursor: pointer;
@@ -596,7 +618,7 @@ body {
 }
 .restaurant-card .fa-solid.fa-heart:hover {
   opacity: 1;
-  animation: heart 50ms;
+  animation: heart;
 }
 .menu-card {
   display: flex;
@@ -604,12 +626,22 @@ body {
   background-color: #fff;
   margin: 20px -5px;
   overflow: hidden;
+  animation: turn-up 600ms backwards;
+}
+.menu-card:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu-card:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu-card:nth-child(4) {
+  animation-delay: 400ms;
 }
 .menu-card h4,
 .menu-card p {
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-card h4 {
   font-weight: 500;

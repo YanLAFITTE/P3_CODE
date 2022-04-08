@@ -11,11 +11,15 @@
   background-color: variables.$quinternary;
   margin: 20px -5px;
   overflow: hidden;
+  animation: turn-up 600ms backwards;
+  @for $i from 2 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: 100ms * $i;
+    }
+  }
   h4,
   p {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    @include mixins.nowrap-text;
   }
   h4 {
     font-weight: 500;
