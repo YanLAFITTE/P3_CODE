@@ -1,6 +1,6 @@
 /****** TYPOGRAPHY ******/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
-.main-menu .order, .location, .explore, .functioning .cards-container, .menu-card .check, .functioning-card .list-numbers, .restaurant-card .card-infos-heart, .footer a, .header {
+.main-menu .order, .location, .explore, .functioning .cards-container, .menu-card .check, .functioning .functioning-card::before, .functioning .restaurant-card .card-infos-heart, .footer a, .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,23 +14,23 @@
   background-image: linear-gradient(-5deg, #9356dc, #ff79da);
 }
 
-.restaurant-card .fa-regular.fa-heart, .restaurant-card .fa-solid.fa-heart {
+.functioning .restaurant-card .fa-regular.fa-heart, .functioning .restaurant-card .fa-solid.fa-heart {
   margin-right: 20px;
   font-size: 22px;
 }
 
-.menu-card h4, .restaurant-card h4 {
+.menu-card h4, .functioning .restaurant-card h4 {
   font-size: 18px;
   padding: 0 15px;
   margin: 15px 0 0;
 }
-.menu-card p, .restaurant-card p {
+.menu-card p, .functioning .restaurant-card p {
   font-weight: 100;
   margin: 5px 0;
   padding: 0 0 12px 15px;
 }
 
-.restaurant-card.new::before {
+.functioning .restaurant-card.new::before {
   content: "Nouveau";
   position: absolute;
   top: 15px;
@@ -46,7 +46,7 @@
   box-shadow: 0px 3px 4px #cecece;
 }
 
-.menu-card, .restaurant-card {
+.menu-card, .functioning .restaurant-card {
   box-shadow: 0 4px 10px #dbdbdb;
 }
 
@@ -58,7 +58,7 @@
   box-shadow: 0 8px 14px #cecece;
 }
 
-.functioning-card {
+.functioning .functioning-card {
   box-shadow: 0 4px 10px #dbdbdb;
 }
 
@@ -545,7 +545,11 @@ body {
 }
 
 /****** FUCTIONNING-CARD *****/
-.functioning-card {
+.functioning {
+  counter-reset: count;
+  /****** RESTAURANTS-CARDS ******/
+}
+.functioning .functioning-card {
   display: flex;
   align-items: center;
   position: relative;
@@ -554,22 +558,25 @@ body {
   background-color: #f4f4f4;
   padding: 28px 20px;
   margin: 5px 0 20px;
+  list-style-type: none;
   transition: all 100ms ease;
 }
-.functioning-card span {
+.functioning .functioning-card span {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.functioning-card:hover {
+.functioning .functioning-card:hover {
   background-color: #efe6fa;
   cursor: pointer;
 }
-.functioning-card:hover i {
+.functioning .functioning-card:hover i {
   color: #9356dc;
   opacity: 1;
 }
-.functioning-card .list-numbers {
+.functioning .functioning-card::before {
+  content: counter(count);
+  counter-increment: count;
   position: absolute;
   left: -12px;
   font-size: 14px;
@@ -579,32 +586,30 @@ body {
   width: 25px;
   height: 25px;
 }
-.functioning-card i {
+.functioning .functioning-card i {
   opacity: 0.5;
-  padding: 0 20px 0 12px;
+  padding: 0 6% 0 4%;
 }
-
-/****** RESTAURANTS-CARDS ******/
-.restaurant-card {
+.functioning .restaurant-card {
   position: relative;
   border-radius: 15px;
   background-color: #fff;
   margin-bottom: 20px;
 }
-.restaurant-card img {
+.functioning .restaurant-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.restaurant-card .card-infos-heart {
+.functioning .restaurant-card .card-infos-heart {
   justify-content: space-between;
 }
-.restaurant-card .fa-regular.fa-heart {
+.functioning .restaurant-card .fa-regular.fa-heart {
   opacity: 0.7;
   position: relative;
 }
-.restaurant-card .fa-solid.fa-heart {
+.functioning .restaurant-card .fa-solid.fa-heart {
   position: absolute;
   right: 0;
   color: transparent;
@@ -613,7 +618,7 @@ body {
   -webkit-background-clip: text;
   opacity: 0;
 }
-.restaurant-card .fa-solid.fa-heart:hover {
+.functioning .restaurant-card .fa-solid.fa-heart:hover {
   opacity: 1;
   animation: heart 50ms;
 }
@@ -721,7 +726,7 @@ body {
 @media (min-width: 992px) {
   .functioning .cards-container {
     flex-direction: row;
-    gap: 5%;
+    gap: 6%;
   }
 }
 
