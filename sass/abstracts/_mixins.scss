@@ -1,11 +1,30 @@
 @use "../abstracts/variables";
 
+/****** MIXINS ******/
+
 @mixin color-back($light: 75%) {
-    background-color: lighten(variables.$quaternary, $light);
+  background-color: lighten(variables.$quaternary, $light);
 }
 
 @mixin nowrap-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin heart {
+    content: "\f004";
+    position: absolute;
+    right: 25px;
+    bottom: 12px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 22px;
 }

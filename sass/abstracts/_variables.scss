@@ -1,16 +1,26 @@
+/****** VARIABLES ******/
+
 //COLORS
+
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $quaternary: #353535;
 $quinternary: #fff;
+
 //GRADIENT
+
 $linear: linear-gradient(-5deg, $primary, $secondary);
 $light-linear: linear-gradient(-5deg, lighten($primary, 5%), lighten($secondary, 5%));
-//SHADOW
+
+//SHADOWS
+
 $header-shadow: lighten($quaternary, 60%);
 $card-shadow: lighten($quaternary, 65%);
 $btn-shadow: lighten($quaternary, 60%);
 $function-shadow: lighten($quaternary, 65%);
+
 //MEDIA-QUERIES
 
+$desktop: 992px;
+$tablet: 768px;

@@ -4,9 +4,9 @@
 @use "../base/animations";
 
 /****** FUCTIONNING-CARD *****/
+
 .functioning {
   counter-reset: count;
-  
   .functioning-card {
     display: flex;
     align-items: center;
@@ -48,49 +48,41 @@
       padding: 0 6% 0 4%;
     }
   }
-  
-  /****** RESTAURANTS-CARDS ******/
-  
-  .restaurant-card {
-    position: relative;
-    border-radius: 15px;
-    background-color: variables.$quinternary;
-    @extend %card-shadow;
-    @extend %headings-position;
-    margin-bottom: 20px;
-    img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
+}
+
+/****** RESTAURANTS-CARDS ******/
+
+.restaurant-card {
+  position: relative;
+  border-radius: 15px;
+  background-color: variables.$quinternary;
+  @extend %card-shadow;
+  @extend %headings-position;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  &.new::before {
+    @extend %new;
+  }
+  .card-infos {
+    &::before {
+      @include mixins.heart;
     }
-    
-    .card-infos-heart {
-      @extend %flex-center;
-      justify-content: space-between;
-    }
-    .fa-regular.fa-heart {
-      opacity: 0.7;
-      position: relative;
-      @extend %heart-position-home;
-    }
-    .fa-solid.fa-heart {
-      position: absolute;
-      right: 0;
+    &::after {
+      @include mixins.heart;
+      @extend %btn-back;
       color: transparent;
-      background-image: variables.$linear;
-      background-clip: text;
-      -webkit-background-clip: text;
-      @extend %heart-position-home;
+      font-weight: 900;
       opacity: 0;
-      &:hover {
-        opacity: 1;
-        animation: heart 50ms;
-      }
+      transition: all 100ms ease;
     }
-    &.new::before {
-      @extend %new;
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1.1);
     }
   }
-  
 }

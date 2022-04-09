@@ -48,7 +48,7 @@
     @extend %flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
-    @media (min-width: 992px) {
+    @media (min-width: variables.$desktop) {
       flex-direction: row;
       gap: 6%;
     }
@@ -65,7 +65,7 @@
   .restaurant-cards {
     @include mixins.nowrap-text;
   }
-  @media (min-width: 992px) {
+  @media (min-width: variables.$desktop) {
     .restaurant-cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
