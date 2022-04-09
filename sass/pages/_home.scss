@@ -48,9 +48,9 @@
     @extend %flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
-    @media (min-width: variables.$desktop) {
+    @media (min-width: variables.$tablet) {
       flex-direction: row;
-      gap: 6%;
+      gap: 4%;
     }
   }
 }
@@ -60,16 +60,44 @@
 .restaurant {
   @include mixins.color-back;
   @extend %padding-sections;
-  margin: 0;
   flex-basis: 50%;
   .restaurant-cards {
     @include mixins.nowrap-text;
   }
-  @media (min-width: variables.$desktop) {
+  @media (min-width: variables.$tablet) {
     .restaurant-cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3%;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4%;
+      padding: 0 20px;
     }
+  }
+  @media (min-width: variables.$desktop) {
+    .restaurant-cards {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media (min-width: variables.$screen) {
+    .restaurant-cards {
+      padding: 0 30px;
+    }
+  }
+}
+@media (min-width: variables.$mobile) {
+  .restaurant,
+  .functioning {
+    margin: 0 20px 20px;
+    border-radius: 20px;
+  }
+  .footer {
+    padding: 15px 40px 30px;
+  }
+}
+@media (min-width: variables.$screen) {
+  .restaurant {
+    margin: 0 50px 50px;
+  }
+  .functioning {
+    margin: 0 50px;
   }
 }

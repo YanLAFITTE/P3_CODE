@@ -17,18 +17,39 @@
   border-radius: 40px 40px 0 0;
   @include mixins.color-back;
   padding: 0 20px 40px;
-  margin-top: -15%;
+  margin-top: -10%;
+  @media (min-width: variables.$tablet) {
+    padding: 0 40px 40px;
+  }
   .menu-heading {
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    &::before {
+      @include mixins.heart;
+      bottom: 4px;
+      right: 20px;
+    }
+    &::after {
+      @include mixins.heart;
+      bottom: 4px;
+      right: 20px;
+      @extend %btn-back;
+      color: transparent;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 150ms ease;
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1.1);
+    }
     h2 {
       font-family: "Shrikhand", "sans-serif";
       font-size: 28px;
       font-weight: 500;
-      margin-top: 38px;
-      margin-bottom: 0;
-      @include mixins.nowrap-text;
+      margin: 35px 40px 0 0;
+      text-overflow: ellipsis;
     }
   }
   .menu h3 {
@@ -38,9 +59,9 @@
     font-weight: 100;
     margin: 40px 0 25px;
     &::before {
+      content: "";
       position: absolute;
       top: 25px;
-      content: "";
       height: 3px;
       width: 45px;
       background-color: variables.$tertiary;
@@ -50,10 +71,15 @@
     .wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 6%;
+      column-gap: 5%;
       .menu {
         min-width: 33%;
       }
+    }
+  }
+  @media (min-width: variables.$screen) {
+    .wrapper {
+      padding: 0 50px;
     }
   }
   .order {

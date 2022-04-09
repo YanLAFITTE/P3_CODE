@@ -19,9 +19,6 @@
     margin: 5px 0 20px;
     list-style-type: none;
     transition: all 100ms ease;
-    span {
-      @include mixins.nowrap-text;
-    }
     &:hover {
       background-color: lighten(variables.$primary, 34%);
       cursor: pointer;
@@ -45,7 +42,7 @@
     }
     i {
       opacity: 0.5;
-      padding: 0 6% 0 4%;
+      padding: 0 5% 0;
     }
   }
 }
@@ -58,7 +55,7 @@
   background-color: variables.$quinternary;
   @extend %card-shadow;
   @extend %headings-position;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   img {
     width: 100%;
     height: 180px;
@@ -78,7 +75,7 @@
       color: transparent;
       font-weight: 900;
       opacity: 0;
-      transition: all 100ms ease;
+      transition: all 150ms ease;
     }
     &:hover::after {
       opacity: 1;

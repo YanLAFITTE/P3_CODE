@@ -11,7 +11,7 @@
   padding: 30px 20px 40px;
 }
 
-.restaurant-card .card-infos::after, .btn {
+.main-menu .menu-heading::after, .restaurant-card .card-infos::after, .btn {
   background-image: linear-gradient(-5deg, #9356dc, #ff79da);
 }
 
@@ -509,6 +509,7 @@ body {
 .footer p {
   font-size: 16px;
   margin: 0;
+  white-space: nowrap;
 }
 .footer .fa-solid {
   font-size: 16px;
@@ -516,6 +517,13 @@ body {
 }
 .footer .fa-handshake-angle {
   font-size: 12px;
+}
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+  }
 }
 
 .btn {
@@ -548,11 +556,6 @@ body {
   list-style-type: none;
   transition: all 100ms ease;
 }
-.functioning .functioning-card span {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 .functioning .functioning-card:hover {
   background-color: #efe6fa;
   cursor: pointer;
@@ -575,7 +578,7 @@ body {
 }
 .functioning .functioning-card i {
   opacity: 0.5;
-  padding: 0 6% 0 4%;
+  padding: 0 5% 0;
 }
 
 /****** RESTAURANTS-CARDS ******/
@@ -583,7 +586,7 @@ body {
   position: relative;
   border-radius: 15px;
   background-color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .restaurant-card img {
   width: 100%;
@@ -625,7 +628,7 @@ body {
   color: transparent;
   font-weight: 900;
   opacity: 0;
-  transition: all 100ms ease;
+  transition: all 150ms ease;
 }
 .restaurant-card .card-infos:hover::after {
   opacity: 1;
@@ -733,17 +736,16 @@ body {
   flex-direction: column;
   padding: 0 5px 0 10px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .functioning .cards-container {
     flex-direction: row;
-    gap: 6%;
+    gap: 4%;
   }
 }
 
 /****** RESTAURANTS ******/
 .restaurant {
   background-color: #f4f4f4;
-  margin: 0;
   flex-basis: 50%;
 }
 .restaurant .restaurant-cards {
@@ -751,14 +753,45 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .restaurant .restaurant-cards {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4%;
+    padding: 0 20px;
+  }
+}
+@media (min-width: 992px) {
+  .restaurant .restaurant-cards {
     grid-template-columns: repeat(4, 1fr);
-    gap: 3%;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurant .restaurant-cards {
+    padding: 0 30px;
   }
 }
 
+@media (min-width: 480px) {
+  .restaurant,
+.functioning {
+    margin: 0 20px 20px;
+    border-radius: 20px;
+  }
+
+  .footer {
+    padding: 15px 40px 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurant {
+    margin: 0 50px 50px;
+  }
+
+  .functioning {
+    margin: 0 50px;
+  }
+}
 /****** LANDING_PAGE ******/
 .landing-page img {
   width: 100%;
@@ -772,21 +805,67 @@ body {
   border-radius: 40px 40px 0 0;
   background-color: #f4f4f4;
   padding: 0 20px 40px;
-  margin-top: -15%;
+  margin-top: -10%;
+}
+@media (min-width: 768px) {
+  .main-menu {
+    padding: 0 40px 40px;
+  }
 }
 .main-menu .menu-heading {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+.main-menu .menu-heading::before {
+  content: "\f004";
+  position: absolute;
+  right: 25px;
+  bottom: 12px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 22px;
+  bottom: 4px;
+  right: 20px;
+}
+.main-menu .menu-heading::after {
+  content: "\f004";
+  position: absolute;
+  right: 25px;
+  bottom: 12px;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 22px;
+  bottom: 4px;
+  right: 20px;
+  color: transparent;
+  font-weight: 900;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 150ms ease;
+}
+.main-menu .menu-heading:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
 }
 .main-menu .menu-heading h2 {
   font-family: "Shrikhand", "sans-serif";
   font-size: 28px;
   font-weight: 500;
-  margin-top: 38px;
-  margin-bottom: 0;
-  overflow: hidden;
-  white-space: nowrap;
+  margin: 35px 40px 0 0;
   text-overflow: ellipsis;
 }
 .main-menu .menu h3 {
@@ -797,9 +876,9 @@ body {
   margin: 40px 0 25px;
 }
 .main-menu .menu h3::before {
+  content: "";
   position: absolute;
   top: 25px;
-  content: "";
   height: 3px;
   width: 45px;
   background-color: #99e2d0;
@@ -808,10 +887,15 @@ body {
   .main-menu .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 6%;
+    column-gap: 5%;
   }
   .main-menu .wrapper .menu {
     min-width: 33%;
+  }
+}
+@media (min-width: 1440px) {
+  .main-menu .wrapper {
+    padding: 0 50px;
   }
 }
 
