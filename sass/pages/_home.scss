@@ -43,7 +43,7 @@
 
 .functioning {
   @include mixins.padding-sections;
-  .cards-container {
+  &__container {
     @include mixins.flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
@@ -73,7 +73,7 @@
   @media #{variables.$xlscreen-up} {
     margin: 0 50px 50px;
   }
-  .restaurant-cards {
+  &__container {
     @include mixins.nowrap-text;
     @media #{variables.$medium-up} {
       display: grid;

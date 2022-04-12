@@ -6,35 +6,51 @@
 
 .loader {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inset: 0;
   z-index: 1;
   background-color: variables.$quaternary;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   opacity: 0.9;
-  animation: load 500ms 3s forwards;
+  animation: load 500ms 4s forwards;
   @keyframes load {
     to {
       opacity: 0;
       transform: translateY(100%);
     }
   }
-  .loader__el:after {
-    content: "";
-    width: 100px;
+  .wave {
+    width: 10px;
     height: 100px;
-    position: absolute;
-    left: 50%;
-    top: 45vh;
-    margin-left: -3rem;
-    border: 3px solid transparent;
-    border-radius: 50%;
-    border-color: variables.$primary variables.$tertiary variables.$secondary
-      variables.$tertiary;
-    animation: loader 3s linear infinite;
+    border-radius: 10px;
+    margin: 10px;
+    animation: wave 2s linear infinite;
   }
-  @keyframes loader {
-    to {
-      transform: rotate(360deg);
+  .wave:nth-child(1) {
+    animation-delay: 0.2s;
+    background-color: variables.$primary;
+  }
+  .wave:nth-child(2) {
+    animation-delay: 0.4s;
+    background-color: variables.$tertiary;
+  }
+  .wave:nth-child(3) {
+    animation-delay: 0.6s;
+    background-color: variables.$secondary;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
     }
   }
 }
@@ -65,4 +81,3 @@
     transform: translateY(0);
   }
 }
-

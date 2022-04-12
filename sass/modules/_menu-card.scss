@@ -15,10 +15,10 @@
     &:nth-child(#{$i}) {
       animation-delay: 100ms * $i;
     }
-  }
+  } 
   &:hover {
     cursor: pointer;
-    .check {
+   .menu-card__check {
       margin-right: 0;
       overflow: hidden;
       white-space: nowrap;
@@ -37,17 +37,17 @@
   p {
     margin: 5px 0 3px;
   }
-  .menu-card-infos {
+  &__infos {
     overflow: hidden;
   }
-  .price {
+  &__price {
     align-self: flex-end;
     font-weight: 500;
     padding: 0 17px 0 15px;
     margin-left: auto;
     margin-bottom: 15px;
   }
-  .check {
+  &__check {
     @include mixins.flex-center;
     background-color: variables.$tertiary;
     margin-right: -80px;

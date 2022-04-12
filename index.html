@@ -14,7 +14,9 @@
   <body>
     <!-- LOADER -->
     <div class="loader">
-      <div class="loader__el"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
     </div>
     <!-- HEADER -->
     <header class="header header-shadow">
@@ -32,39 +34,39 @@
         <p>
           Découvrez des restaurants d'exception, séléctionnés par nos soins.
         </p>
-        <a href="#">
+        <a href="#restaurant">
           <div class="btn">Exolorer nos restaurants</div>
         </a>
       </section>
       <!-- FUNCTIONING -->
       <section class="functioning">
         <h3>Fonctionnement</h3>
-        <ol class="cards-container">
-          <li class="functioning-card">
+        <ol class="functioning__container">
+          <li class="functioning__card">
             <i class="fa-solid fa-mobile-screen-button"></i>
             <span>Choisissez un restaurant</span>
           </li>
-          <li class="functioning-card">
+          <li class="functioning__card">
             <i class="fa-solid fa-list-ul"></i>
             <span>Composez votre menu</span>
           </li>
-          <li class="functioning-card">
+          <li class="functioning__card">
             <i class="fa-solid fa-store"></i>
             <span>Dégustez au restaurant</span>
           </li>
         </ol>
       </section>
       <!-- RESTAURANT -->
-      <section class="restaurant">
+      <section class="restaurant" id="restaurant">
         <h3>Restaurants</h3>
-        <div class="restaurant-cards">
+        <div class="restaurant__container">
           <a href="la-palette-du-gout.html">
             <article class="restaurant-card new">
               <img
                 src="assets/restaurants/la-palette-du-gout-jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="La palette du goût"
               />
-              <div class="card-infos">
+              <div class="restaurant-card__infos">
                 <h4>La palette du goût</h4>
                 <p>Ménilmontant</p>
               </div>
@@ -76,7 +78,7 @@
                 src="assets/restaurants/la-note-enchantee-stil-u2Lp8tXIcjw-unsplash.jpg"
                 alt="La note enchantée"
               />
-              <div class="card-infos">
+              <div class="restaurant-card__infos">
                 <h4>La note enchantée</h4>
                 <p>Charonne</p>
               </div>
@@ -88,7 +90,7 @@
                 src="assets/restaurants/a-la-francaise-toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt="À la française"
               />
-              <div class="card-infos">
+              <div class="restaurant-card__infos">
                 <h4>À la française</h4>
                 <p>Cité Rouge</p>
               </div>
@@ -100,7 +102,7 @@
                 src="assets/restaurants/le-delice-des-sens-louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="Le délice des sens"
               />
-              <div class="card-infos">
+              <div class="restaurant-card__infos">
                 <h4>Le délice des sens</h4>
                 <p>Folie-Méricourt</p>
               </div>
@@ -111,21 +113,21 @@
     </main>
     <!-- FOOTER -->
     <footer class="footer">
-      <h2 class="footer-title">ohmyfood</h2>
-        <a href="#">
-          <i class="fa-solid fa-utensils"></i>
-          <p>Proposer un restaurant</p>
-        </a>
-        <a href="#">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <p>Devenir partenaire</p>
-        </a>
-        <a href="#">
-          <p>Mentions légales</p>
-        </a>
-        <a href="mailto:oh@myfood.com">
-          <p>Contact</p>
-        </a>
+      <h2 class="footer__title">ohmyfood</h2>
+      <a href="#">
+        <i class="fa-solid fa-utensils"></i>
+        <p>Proposer un restaurant</p>
+      </a>
+      <a href="#">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <p>Devenir partenaire</p>
+      </a>
+      <a href="#">
+        <p>Mentions légales</p>
+      </a>
+      <a href="mailto:oh@myfood.com">
+        <p>Contact</p>
+      </a>
     </footer>
   </body>
 </html>

@@ -6,7 +6,7 @@
 
 .functioning {
   counter-reset: count;
-  .functioning-card {
+  &__card {
     display: flex;
     align-items: center;
     position: relative;
@@ -67,7 +67,7 @@
   &.new::before {
     @include mixins.new;
   }
-  .card-infos {
+  &__infos {
     &::before {
       @include mixins.heart;
     }
