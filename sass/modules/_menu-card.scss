@@ -15,16 +15,16 @@
     &:nth-child(#{$i}) {
       animation-delay: 100ms * $i;
     }
-  } 
+  }
   &:hover {
     cursor: pointer;
-   .menu-card__check {
+    .menu-card__check {
       margin-right: 0;
       overflow: hidden;
       white-space: nowrap;
     }
     .fa-solid.fa-check {
-      animation: check-rotate 400ms ease-in;
+      animation: check-rotate 300ms ease-in;
     }
   }
   h4,

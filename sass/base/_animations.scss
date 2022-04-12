@@ -27,7 +27,7 @@
     height: 100px;
     border-radius: 10px;
     margin: 10px;
-    animation: wave 2s linear infinite;
+    animation: wave 2s ease-in-out infinite;
   }
   .wave:nth-child(1) {
     animation-delay: 0.2s;
@@ -44,13 +44,13 @@
 
   @keyframes wave {
     0% {
-      transform: scale(0);
-    }
-    50% {
       transform: scale(1);
+    } 
+    50% {
+      transform: scale(0);
     }
     100% {
-      transform: scale(0);
+      transform: scale(1);
     }
   }
 }

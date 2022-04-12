@@ -1,12 +1,18 @@
 {
   "name": "p3_lafitte_code",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet 3, Dynamisez une page web avec des animations CSS",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss css/style.css"
+    "sass": "sass --watch sass/main.scss css/style.css",
+    "prefix": "",
+    "prod": ""
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YanLAFITTE/P3_CODE"
+  },
+  "author": "Yan Lafitte",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.49.9"
