@@ -1,6 +1,6 @@
-/****** VARIABLES ******/
+// VARIABLES =========
 
-//COLORS
+// COLORS =========
 
 $primary: #9356dc;
 $secondary: #ff79da;
@@ -8,20 +8,38 @@ $tertiary: #99e2d0;
 $quaternary: #353535;
 $quinternary: #fff;
 
-//GRADIENT
+// GRADIENT =========
 
 $linear: linear-gradient(-5deg, $primary, $secondary);
-$light-linear: linear-gradient(-5deg, lighten($primary, 5%), lighten($secondary, 5%));
+$light-linear: linear-gradient(
+  -5deg,
+  lighten($primary, 5%),
+  lighten($secondary, 5%)
+);
 
-//SHADOWS
+// SHADOWS =========
 
 $header-shadow: lighten($quaternary, 60%);
 $card-shadow: lighten($quaternary, 65%);
 $btn-shadow: lighten($quaternary, 60%);
 $function-shadow: lighten($quaternary, 65%);
 
-//MEDIA-QUERIES
-$screen: 1440px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 480px;
+// MEDIA-QUERIES =========
+
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$xlscreen: 1440px;
+$xxlscreen: 1680px;
+
+$small-up: "only screen  and (min-width: #{$small})";
+$small-down: "only screen  and (max-width: #{$small})";
+$medium-up: "only screen  and (min-width: #{$medium})";
+$medium-down: "only screen  and (max-width: #{$medium})";
+$large-up: "only screen  and (min-width: #{$large})";
+$large-down: "only screen  and (max-width: #{$large})";
+$xlscreen-up: "only screen  and (min-width: #{$xlscreen})";
+$xlscreen-down: "only screen  and (max-width: #{$xlscreen})";
+$xxlscreen-up: "only screen  and (min-width: #{$xxlscreen})";
+$xxlscreen-down: "only screen  and (max-width: #{$xxlscreen})";
+

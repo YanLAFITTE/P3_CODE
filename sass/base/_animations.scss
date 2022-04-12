@@ -1,9 +1,8 @@
 @use "../abstracts/variables";
-@use "../abstracts/placeholders";
 
-/****** ANIMATIONS ******/
+//ANIMATIONS =========
 
-/****** LOADING-SPINNER ******/
+// LOADING-SPINNER =========
 
 .loader {
   position: fixed;
@@ -19,7 +18,7 @@
       transform: translateY(100%);
     }
   }
-  .loader-el:after {
+  .loader__el:after {
     content: "";
     width: 100px;
     height: 100px;
@@ -40,7 +39,7 @@
   }
 }
 
-/****** CHECK-ROTATION ******/
+// CHECK-ROTATION =========
 
 @keyframes check-rotate {
   from {
@@ -51,7 +50,7 @@
   }
 }
 
-/****** MENUS-TRANSLATION ******/
+// MENUS-TRANSLATION =========
 
 @keyframes turn-up {
   0% {

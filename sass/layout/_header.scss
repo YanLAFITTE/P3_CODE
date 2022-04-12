@@ -1,12 +1,11 @@
-@use "../abstracts/placeholders";
-@use "../abstracts/variables";
+@use "../abstracts/mixins";
 
-/****** HEADER ******/
+// HEADER =========
 
 .header {
-  @extend %flex-center;
+  @include mixins.flex-center;
   position: relative;
-  .header-title {
+  .header__title {
     font-size: 30px;
     font-weight: 500;
     font-family: "Shrikhand", sans-serif;

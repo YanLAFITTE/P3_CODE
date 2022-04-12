@@ -1,9 +1,8 @@
 @use "../abstracts/variables";
-@use "../abstracts/placeholders";
 @use "../abstracts/mixins";
 @use "../base/animations";
 
-/****** FUCTIONNING-CARD *****/
+// FUCTIONNING-CARD =========
 
 .functioning {
   counter-reset: count;
@@ -14,7 +13,7 @@
     width: 100%;
     border-radius: 20px;
     @include mixins.color-back;
-    @extend %function-shadow;
+    @include mixins.function-shadow;
     padding: 28px 20px;
     margin: 5px 0 20px;
     list-style-type: none;
@@ -38,23 +37,26 @@
       border-radius: 50%;
       width: 25px;
       height: 25px;
-      @extend %flex-center;
+      @include mixins.flex-center;
     }
     i {
       opacity: 0.5;
       padding: 0 5% 0;
     }
+    @media #{variables.$xlscreen-up} {
+      max-width: 500px;
+    }
   }
 }
 
-/****** RESTAURANTS-CARDS ******/
+// RESTAURANTS-CARDS =========
 
 .restaurant-card {
   position: relative;
   border-radius: 15px;
   background-color: variables.$quinternary;
-  @extend %card-shadow;
-  @extend %headings-position;
+  @include mixins.card-shadow;
+  @include mixins.headings-position;
   margin-bottom: 25px;
   img {
     width: 100%;
@@ -63,7 +65,7 @@
     border-radius: 15px 15px 0 0;
   }
   &.new::before {
-    @extend %new;
+    @include mixins.new;
   }
   .card-infos {
     &::before {
@@ -71,7 +73,7 @@
     }
     &::after {
       @include mixins.heart;
-      @extend %btn-back;
+      @include mixins.btn-back;
       color: transparent;
       font-weight: 900;
       opacity: 0;
@@ -81,5 +83,8 @@
       opacity: 1;
       transform: scale(1.1);
     }
+  }
+  @media #{variables.$xlscreen-up} {
+    max-width: 450px;
   }
 }

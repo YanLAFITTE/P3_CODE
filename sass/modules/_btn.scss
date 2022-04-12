@@ -1,17 +1,18 @@
-@use "../abstracts/placeholders";
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
+// BUTTON =========
+
 .btn {
-  @extend %btn-back;
-  @extend %btn-shadow;
+  @include mixins.btn-back;
+  @include mixins.btn-shadow;
   border-radius: 30px;
   color: variables.$quinternary;
   padding: 16px 25px;
   transition: all 100ms ease;
   &:hover {
     background-image: variables.$light-linear;
-    @extend %btn-shadow-hover;
+    @include mixins.btn-shadow-hover;
   }
   &.btn-wide {
     padding: 16px 45px;

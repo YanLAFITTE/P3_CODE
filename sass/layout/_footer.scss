@@ -1,7 +1,7 @@
-@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 @use "../abstracts/variables";
 
-/****** FOOTER ******/
+// FOOTER =========
 
 .footer {
   background-color: variables.$quaternary;
@@ -14,25 +14,25 @@
     padding-bottom: 10px;
   }
   a {
-    @extend %flex-center;
+    @include mixins.flex-center;
     justify-content: left;
     padding-bottom: 10px;
   }
   p {
-    font-size: 16px;
     margin: 0;
     white-space: nowrap;
   }
   .fa-solid {
-    font-size: 16px;
     padding-right: 10px;
   }
   .fa-handshake-angle {
     font-size: 12px;
   }
-  @media (min-width: variables.$screen) {
+  @media #{variables.$xlscreen-up} {
       display: flex;
-      justify-content: center;
-      gap: 12%;
+      justify-content: space-evenly;
+  }
+  @media #{variables.$small-up} {
+      padding: 15px 40px 30px;
   }
 }

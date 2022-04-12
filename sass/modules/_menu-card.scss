@@ -1,20 +1,30 @@
-@use "../abstracts/placeholders";
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 @use "../base/animations";
 
 .menu-card {
   display: flex;
-  @extend %card-shadow;
-  @extend %headings-position;
+  @include mixins.card-shadow;
+  @include mixins.headings-position;
   border-radius: 17px;
   background-color: variables.$quinternary;
   margin: 20px -5px;
   overflow: hidden;
   animation: turn-up 600ms backwards;
-  @for $i from 2 through 4 {
+  @for $i from 2 through 5 {
     &:nth-child(#{$i}) {
       animation-delay: 100ms * $i;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .check {
+      margin-right: 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .fa-solid.fa-check {
+      animation: check-rotate 400ms ease-in;
     }
   }
   h4,
@@ -38,7 +48,7 @@
     margin-bottom: 15px;
   }
   .check {
-    @extend %flex-center;
+    @include mixins.flex-center;
     background-color: variables.$tertiary;
     margin-right: -80px;
     min-width: 78px;
@@ -52,17 +62,6 @@
       background-color: variables.$quinternary;
       color: variables.$tertiary;
       font-size: 20px;
-    }
-  }
-  &:hover {
-    cursor: pointer;
-    .check {
-      margin-right: 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .fa-solid.fa-check {
-      animation: check-rotate 400ms ease-in;
     }
   }
 }

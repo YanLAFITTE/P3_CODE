@@ -1,17 +1,16 @@
-@use "../abstracts/placeholders";
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-/****** HEADER-SHADOW ******/
+// HEADER-SHADOW =========
 
 .header-shadow {
-  @extend %header-shadow;
+  @include mixins.header-shadow;
 }
 
-/****** LOCATION ******/
+// LOCATION =========
 
 .location {
-  @extend %flex-center;
+  @include mixins.flex-center;
   @include mixins.color-back(70%);
   p {
     font-weight: 400;
@@ -20,15 +19,15 @@
   }
 }
 
-/****** EXPLORE ******/
+// EXPLORE =========
 
 .explore {
-  @extend %flex-center;
+  @include mixins.flex-center;
   flex-direction: column;
   text-align: center;
   padding: 20px 20px 50px;
   @include mixins.color-back;
-  .explore-title {
+  .explore__title {
     margin: 18px 40px 0;
   }
   p {
@@ -40,64 +39,53 @@
   }
 }
 
-/****** FUNCTIONNING ******/
+// FUNCTIONING =========
 
 .functioning {
-  @extend %padding-sections;
+  @include mixins.padding-sections;
   .cards-container {
-    @extend %flex-center;
+    @include mixins.flex-center;
     flex-direction: column;
     padding: 0 5px 0 10px;
-    @media (min-width: variables.$tablet) {
+    @media #{variables.$medium-up} {
       flex-direction: row;
       gap: 4%;
     }
   }
+  @media #{variables.$small-up} {
+    margin: 0 20px;
+  }
+  @media #{variables.$xlscreen-up} {
+    margin: 0 50px;
+  }
 }
 
-/****** RESTAURANTS ******/
+// RESTAURANTS =========
 
 .restaurant {
   @include mixins.color-back;
-  @extend %padding-sections;
+  @include mixins.padding-sections;
   flex-basis: 50%;
+  @media #{variables.$small-up} {
+    margin: 0 20px 50px;
+    border-radius: 20px;
+  }
+  @media #{variables.$xlscreen-up} {
+    margin: 0 50px 50px;
+  }
   .restaurant-cards {
     @include mixins.nowrap-text;
-  }
-  @media (min-width: variables.$tablet) {
-    .restaurant-cards {
+    @media #{variables.$medium-up} {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 4%;
       padding: 0 20px;
     }
-  }
-  @media (min-width: variables.$desktop) {
-    .restaurant-cards {
+    @media #{variables.$large-up} {
       grid-template-columns: repeat(4, 1fr);
     }
-  }
-  @media (min-width: variables.$screen) {
-    .restaurant-cards {
-      padding: 0 30px;
+    @media #{variables.$xlscreen-up} {
+      padding: 0 4%;
     }
-  }
-}
-@media (min-width: variables.$mobile) {
-  .restaurant,
-  .functioning {
-    margin: 0 20px 20px;
-    border-radius: 20px;
-  }
-  .footer {
-    padding: 15px 40px 30px;
-  }
-}
-@media (min-width: variables.$screen) {
-  .restaurant {
-    margin: 0 50px 50px;
-  }
-  .functioning {
-    margin: 0 50px;
   }
 }
