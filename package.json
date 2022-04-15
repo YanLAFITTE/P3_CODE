@@ -4,15 +4,24 @@
   "description": "Projet 3, Dynamisez une page web avec des animations CSS",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss css/style.css"
+    "sass": "sass --watch --style compressed ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -o ./public/style.prefixed.css"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YanLAFITTE/P3_CODE"
+    "url": "git+https://github.com/YanLAFITTE/P3_CODE.git"
   },
   "author": "Yan Lafitte",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.49.9"
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/YanLAFITTE/P3_CODE/issues"
+  },
+  "homepage": "https://github.com/YanLAFITTE/P3_CODE#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.50.0"
   }
 }
