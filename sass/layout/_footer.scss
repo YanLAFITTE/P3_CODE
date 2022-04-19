@@ -28,11 +28,10 @@
   .fa-handshake-angle {
     font-size: 12px;
   }
-  @media #{variables.$xlscreen-up} {
-      display: flex;
-      justify-content: space-evenly;
-  }
   @media #{variables.$small-up} {
-      padding: 15px 40px 30px;
+    padding: 15px 40px 30px;
+  }
+  @media #{variables.$xlscreen-up} {
+    padding: 15px 70px 30px;
   }
 }
